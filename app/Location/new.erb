@@ -1,0 +1,52 @@
+<div class="toolbar">
+	<h1 id="pageTitle">
+		New Location
+	</h1>
+</div>
+
+<form title="New Location" 
+	  class="panel"
+	  id="location_new_form" 
+	  method="POST" 
+	  action="<%=url_for(:action => :create)%>" selected="true">
+	<fieldset>
+		<input type="hidden" name="id" value="<%=@location.object%>"/>
+		
+                  <div class="row">
+                          <label>Title: </label>
+                          <input type="text" name="location[title]"/>
+                  </div>
+
+		  <div class="row">
+			  <label>Latitude: </label>
+			  <input type="text" name="location[latitude]"/>
+		  </div>
+		
+		  <div class="row">
+			  <label>Longitude: </label>
+			  <input type="text" name="location[longitude]"/>
+		  </div>
+		
+		  <div class="row">
+			  <label>Street address: </label>
+			  <input type="text" name="location[street_address]"/>
+		  </div>
+		
+		  <div class="row">
+			  <label>City: </label>
+			  <input type="text" name="location[city]"/>
+		  </div>
+		
+		  <div class="row">
+			  <label>State: </label>
+			  <input type="text" name="location[state]"/>
+		  </div>
+		
+		  <div class="row">
+			  <label>Zip code: </label>
+			  <input type="text" name="location[zip_code]"/>
+		  </div>
+		
+	</fieldset>
+	<input type="submit" value="Create"/>
+</form>
