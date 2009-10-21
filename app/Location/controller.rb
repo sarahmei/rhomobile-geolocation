@@ -46,4 +46,11 @@ class LocationController < Rho::RhoController
     @location.destroy
     redirect :action => :index
   end
+
+  # POST /Location/{1}/add_current_lat_long
+  def add_current_lat_long
+    @location = Location.find(@params['id'])
+    @location.update_attributes({:latitude => GeoLocation.latitude, :longitude => GeoLocation.longitude})
+    render :action => :show
+  end
 end
