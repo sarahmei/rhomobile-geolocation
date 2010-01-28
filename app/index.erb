@@ -1,9 +1,26 @@
+<script type="text/javascript">
+function waitForGPS() {
+  $.get("/system/geolocation",
+    function(data){
+      data = data.split(";");
+      if (data[1] == "Reading" && data[2] == "Reading") {
+        setTimeout("waitForGPS()", 5000);
+      } else {
+        window.location.href = 'Location/new';
+      }
+    });
+}
+$(document).ready(function(){waitForGPS();});
+</script>
+
 <div class="toolbar">
-	<h1 id="pageTitle">
-		Whereami
-	</h1>
+  <h1 id="pageTitle">
+    Current Location
+  </h1>
 </div>
 
-<ul id="home" selected="true" title="Whereami">
-	<li>Add links here...</li>
-</ul>
+<div class="panel" selected="true">
+
+<p align="center">Acquiring your location...</p>
+
+</div>

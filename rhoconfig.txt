@@ -1,11 +1,11 @@
 # Startup page for your application
-start_path = '/app/Location'
+start_path = '/app'
 
 # Path to the options page (in this case handled by javascript)
 options_path = '/app/Settings'
 
 # Location of bundle url (i.e. from rhohub.com)
-rhobundle_zip_url = ''
+rhobundle_zip_url = 'http://sarahmei.rhohub.com/apps/2234/bundle/2a06f254-b723-4198-b8f7-8d825bfe2bc9'
 
 # Optional password to access bundle (usually not required)
 rhobundle_zip_pwd = nil
@@ -19,4 +19,4 @@ KeepTrackOfLastVisitedPage = 0
 LastVisitedPage = ''
 
 # Sync server url.  This must be the full path to your sources.  For example: http://rhomobile.rhohub.com/apps/SugarCRM/sources/
-syncserver = ''
+syncserver = 'http://sarahmei.rhohub.com/apps/SimpleGeolocation/sources/'
