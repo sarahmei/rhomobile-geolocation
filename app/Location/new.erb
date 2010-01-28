@@ -19,5 +19,14 @@
   </tr>
 
 </table>
+
+<% if System::get_property('platform') == 'APPLE' or System::get_property('platform') == 'Blackberry' %>
+  <p align="center">
+    <a class="whiteButton" href="show_map?latitude=<%= @location.latitude.to_s %>&longitude=<%= @location.longitude.to_s %>" target="_self">
+      Map it!
+    </a>
+  </p>
+<% end %>
+
 </div>
 
